@@ -1,0 +1,24 @@
+{
+  "name": "rock-paper-scissors",
+  "version": "1.0.0",
+  "description": "My last Vanilla JavaScript project",
+  "homepage": "https://github.com/software-fish/Rock-Paper-Scissors#readme",
+  "bugs": {
+    "url": "https://github.com/software-fish/Rock-Paper-Scissors/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/software-fish/Rock-Paper-Scissors.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "scripts": {
+    "start": "webpack-dev-server",
+    "build": "npx webpack --mode production"
+  },
+  "devDependencies": {
+    "webpack": "^5.112.2",
+    "webpack-cli": "^7.3.1",
+    "webpack-dev-server": "^6.1.0"
+  }
+}
