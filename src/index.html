@@ -11,7 +11,7 @@
         <p>In this game you will be facing the computer in a game of Rock Paper and Scissors.</p>
     </header>
     <article id="description">
-        <p>Basically Rock beats Scissors, Scissors beat Paper and Paper beats Rock</p>
+        <p>Basically, Rock beats Scissors, Scissors beat Paper and Paper beats Rock</p>
         <p>If your option beats the computers option you win the game</p>
         <aside>
             <em>Fun fact: In 2006, Christie’s and Sotheby’s—the world’s two largest auction houses—competed for the right to sell an $18 million collection of Impressionist art, including works by Cezanne, Picasso, and Gauguin.
@@ -20,7 +20,26 @@ Instead of choosing based on sales pitches, the owner, Japanese electronics exec
     </article>
     <section>
         <p>Ready to play? Press Play and let the game begin.</p>
-        <button>Play</button>
+        <button id="begin">Start</button>
     </section>
+    <main id="game" hidden>
+        <h1>LET THE GAME BEGIN!!!!!!!</h1>
+        <p>Now pick your move (I bet the computer is already waiting for you)</p>
+        <section id="pick">
+            <button class="move">Rock</button>
+            <button class="move">Paper</button>
+            <button class="move">Scissors</button>
+        </section>
+        <button id="start-game">Play</button>
+        <section id="outcome">
+            <p id="player-choice"></p>
+            <p id="computer-choice"></p>
+            <p id="who-won"></p>
+        </section>
+        <section id="after">
+            <p>Do you wanna play again?</p>
+            <button>Play Again</button>
+        </section>
+    </main>
 </body>
 </html>
