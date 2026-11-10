@@ -1,6 +1,5 @@
 const begin = document.getElementById("begin")
 const game = document.getElementById("game")
-const pick = document.getElementById("pick")
 const startGame = document.getElementById("start-game")
 const playerChoice = document.getElementById("player-choice")
 const computerChoice = document.getElementById("computer-choice")
@@ -68,5 +67,5 @@ const computer = {
 }
 
 const determineWinner = ({ target }) => {
-    
+
 }
