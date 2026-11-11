@@ -6,6 +6,7 @@ const after = document.getElementById("after")
 const playerChoice = document.getElementById("player-choice")
 const computerChoice = document.getElementById("computer-choice")
 const winner = document.getElementById("who-won")
+const play = document.getElementById("play")
 
 begin.onclick = () => game.hidden = false
 
@@ -75,11 +76,15 @@ const computer = {
     }
 }
 
-const determineWinner = ({ target }) => {
-    if (target.id === "pick") return
-    if (player.have_played) return winner.textContent = "You have already played."
+const setMoves = ({ target }) => {
+    if (target.id === "pick" || player.have_played) return
 
     player.selectMove(target.textContent)
+}
+
+const determineWinner = () => {
+    if (player.have_played) return winner.textContent = "You have already played."
+
     computer.selectMove()
 
     playerChoice.textContent = `Player selected ${player.choice}`
@@ -112,5 +117,6 @@ const resetGame = () => {
     after.hidden = true
 }
 
-pick.addEventListener("click", determineWinner)
+pick.addEventListener("click", setMoves)
+play.addEventListener("click", determineWinner)
 retry.addEventListener("click", resetGame)
