@@ -8,7 +8,10 @@ const computerChoice = document.getElementById("computer-choice")
 const winner = document.getElementById("who-won")
 const play = document.getElementById("play")
 
-begin.onclick = () => game.hidden = false
+begin.onclick = () => {
+    game.hidden = false; 
+    begin.hidden = true;
+}
 
 const player = {
     _choice: '',
@@ -79,6 +82,7 @@ const computer = {
 const setMoves = ({ target }) => {
     if (target.id === "pick" || player.have_played) return
 
+    play.hidden = false
     player.selectMove(target.textContent)
 }
 
@@ -115,6 +119,7 @@ const resetGame = () => {
     winner.textContent = ''
 
     after.hidden = true
+    play.hidden = true
 }
 
 pick.addEventListener("click", setMoves)
