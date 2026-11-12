@@ -14,7 +14,7 @@
   "author": "",
   "scripts": {
     "start": "webpack-dev-server",
-    "build": "npx webpack --mode production"
+    "build": "webpack --mode production"
   },
   "devDependencies": {
     "webpack": "^5.112.2",
