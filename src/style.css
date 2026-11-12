@@ -1,0 +1,60 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.intro {
+    text-align: center;
+}
+
+em {
+    display: block;
+    background: rgb(255, 255, 255);
+    border: 6px solid black;
+    margin-right: 30%;
+    margin-left: 30%;
+}
+
+.play {
+    display: block;
+    margin: 0 auto;
+    background: violet;
+    border: 3px darkmagenta solid;
+    border-radius: 3px;
+    padding: 5px;
+}
+
+.play:hover {
+    background: darkorchid;
+}
+
+.play:active {
+    background: darkmagenta;
+}
+
+.center {
+    text-align: center;
+}
+
+#pick {
+    display: grid;
+    justify-content: center;
+    gap: 10%;
+    margin-bottom: 2%;
+}
+
+.move {
+    background: lightblue;
+    padding-top: 5%;
+    border: 5px solid blue;
+    border-radius: 4px;
+}
+
+.move:hover {
+    background: purple;
+}
+
+#play {
+    display: none;
+}

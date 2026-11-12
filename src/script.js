@@ -7,10 +7,11 @@ const playerChoice = document.getElementById("player-choice")
 const computerChoice = document.getElementById("computer-choice")
 const winner = document.getElementById("who-won")
 const play = document.getElementById("play")
+let previousSelected;
 
 begin.onclick = () => {
-    game.hidden = false; 
-    begin.hidden = true;
+    begin.style.display = 'none';
+    game.hidden = false;
 }
 
 const player = {
@@ -81,8 +82,12 @@ const computer = {
 
 const setMoves = ({ target }) => {
     if (target.id === "pick" || player.have_played) return
+    if (previousSelected) previousSelected.style["background"] = 'lightblue'
 
-    play.hidden = false
+    target.style["background"] = 'purple'
+    previousSelected = target
+
+    play.style.display = 'block'
     player.selectMove(target.textContent)
 }
 
@@ -119,7 +124,7 @@ const resetGame = () => {
     winner.textContent = ''
 
     after.hidden = true
-    play.hidden = true
+    play.style.display = 'none'
 }
 
 pick.addEventListener("click", setMoves)
